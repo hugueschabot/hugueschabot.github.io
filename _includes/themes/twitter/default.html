@@ -6,54 +6,89 @@
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!-- Twitter card -->
+    {% if site.author.twitter and page.description %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.author.twitter }}">
+    <meta name="twitter:url" content="{{site.production_url}}{{ page.url }}">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    {% endif %}
 
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
-    <!-- Le fav and touch icons -->
-  <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  -->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="{{ ASSET_PATH }}/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ ASSET_PATH }}/icons/apple-touch-icon-iphone-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ ASSET_PATH }}/icons/apple-touch-icon-ipad-144.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ ASSET_PATH }}/icons/apple-touch-icon-iphone-114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ ASSET_PATH }}/icons/apple-touch-icon-ipad-144.png">
   </head>
 
   <body>
 
-    <div class="navbar">
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
           <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-          <ul class="nav">
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
-          </ul>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              {% assign pages_list = site.pages %}
+              {% assign group = 'navigation' %}
+              {% include JB/pages_list %}
+            </ul>
+            <ul class="nav pull-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Follow <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  {% if site.author.github %}<li><a href="https://github.com/{{ site.author.github }}" title="Follow me on GitHub">GitHub</a></li>{% endif %}
+                  {% if site.author.twitter %}<li><a href="https://twitter.com/{{ site.author.twitter }}" title="Follow me on Twitter">Twitter</a></li>{% endif %}
+                  {% if site.author.linkedin %}<li><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" title="View my profile on LinkedIn">LinkedIn</a></li>{% endif %}
+                  <li><a href="{{ BASE_PATH }}atom.xml" title="Subscribe to Posts">Atom Feed</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
     <div class="container">
 
-      <div class="content">
+      <!--div class="well"-->
         {{ content }}
-      </div>
+      <!--/div-->
+
+      <hr>
 
       <footer>
-        <p>&copy; {{ site.author.name }} 2012 
+        <p>&copy; {{ site.author.name }} 2013
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
         </p>
       </footer>
 
     </div> <!-- /container -->
 
     {% include JB/analytics %}
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ ASSET_PATH }}/jquery/js/jquery.min.js"></script>
+    <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
+
   </body>
 </html>
