@@ -56,7 +56,7 @@
                   {% if site.author.github %}<li><a href="https://github.com/{{ site.author.github }}" title="Follow me on GitHub">GitHub</a></li>{% endif %}
                   {% if site.author.twitter %}<li><a href="https://twitter.com/{{ site.author.twitter }}" title="Follow me on Twitter">Twitter</a></li>{% endif %}
                   {% if site.author.linkedin %}<li><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" title="View my profile on LinkedIn">LinkedIn</a></li>{% endif %}
-                  <li><a href="{{ BASE_PATH }}atom.xml" title="Subscribe to Posts">Atom Feed</a></li>
+                  <li><a href="{% if site.author.feedburner %}http://feeds.feedburner.com/{{ site.author.feedburner }}{% else %}{{ BASE_PATH }}atom.xml{% endif %}" title="Subscribe to Posts">Posts Feed</a></li>
                 </ul>
               </li>
             </ul>

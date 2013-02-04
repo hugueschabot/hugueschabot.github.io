@@ -12,14 +12,14 @@ exclude: ["README.md", "Rakefile"]
 # so be sure to set them if your theme uses them.
 #
 title : "Hugues Chabot"
-tagline: "Small, local, old, and particular"
+tagline: "Null Dereference"
 author :
   name : Hugues Chabot
   email : hugues.chabot@gmail.com
   github : hugueschabot
   twitter : hugueschabot
   linkedin : hugueschabot
-  feedburner : ?hugues.chabot@gmail.com?
+  feedburner : HuguesChabot
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
@@ -84,7 +84,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : hugueschabot
     livefyre :
       site_id : 123
     intensedebate :
@@ -102,7 +102,7 @@ JB :
   analytics :
     provider : google
     google :
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-38179487-1'
     getclicky :
       site_id :
     mixpanel :
