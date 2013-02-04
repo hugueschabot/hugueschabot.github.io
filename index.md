@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Hugues Chabot"
-tagline: "Small, local, old, and particular"
+tagline: "Null Dereference"
 ---
 {% include JB/setup %}
 

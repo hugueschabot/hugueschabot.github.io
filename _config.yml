@@ -12,7 +12,7 @@ exclude: ["README.md", "Rakefile"]
 # so be sure to set them if your theme uses them.
 #
 title : "Hugues Chabot"
-tagline: "Small, local, old, and particular"
+tagline: "Null Dereference"
 author :
   name : Hugues Chabot
   email : hugues.chabot@gmail.com
@@ -102,7 +102,7 @@ JB :
   analytics :
     provider : google
     google :
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-38179487-1'
     getclicky :
       site_id :
     mixpanel :
