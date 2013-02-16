@@ -45,8 +45,6 @@ Since Play is a framework for web applications that run on the JVM, it is diffic
 
 #### Nothing about testing
 
-#### Nothing about iteratee (wait for Akka)
-
 [play]: http://www.playframework.org/
 [playforscala]: http://www.manning.com/hilton/
 [meap]: http://www.manning.com/about/meap.html
