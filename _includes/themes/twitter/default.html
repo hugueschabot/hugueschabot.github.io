@@ -17,6 +17,7 @@
 
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -42,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+          <a class="brand" href="{{ HOME_PATH }}"><i class="icon-home"></i> {{ site.title }}</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               {% assign pages_list = site.pages %}
@@ -51,12 +52,12 @@
             </ul>
             <ul class="nav pull-right">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Follow <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> Follow <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  {% if site.author.github %}<li><a href="https://github.com/{{ site.author.github }}" title="Follow me on GitHub">GitHub</a></li>{% endif %}
-                  {% if site.author.twitter %}<li><a href="https://twitter.com/{{ site.author.twitter }}" title="Follow me on Twitter">Twitter</a></li>{% endif %}
-                  {% if site.author.linkedin %}<li><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" title="View my profile on LinkedIn">LinkedIn</a></li>{% endif %}
-                  <li><a href="{% if site.author.feedburner %}http://feeds.feedburner.com/{{ site.author.feedburner }}{% else %}{{ BASE_PATH }}atom.xml{% endif %}" title="Subscribe to Posts">Posts Feed</a></li>
+                  {% if site.author.github %}<li><a href="https://github.com/{{ site.author.github }}" title="Follow me on GitHub"><i class="icon-github-alt"></i> GitHub</a></li>{% endif %}
+                  {% if site.author.twitter %}<li><a href="https://twitter.com/{{ site.author.twitter }}" title="Follow me on Twitter"><i class="icon-twitter"></i> Twitter</a></li>{% endif %}
+                  {% if site.author.linkedin %}<li><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" title="View my profile on LinkedIn"><i class="icon-linkedin"></i> LinkedIn</a></li>{% endif %}
+                  <li><a href="{% if site.author.feedburner %}http://feeds.feedburner.com/{{ site.author.feedburner }}{% else %}{{ BASE_PATH }}atom.xml{% endif %}" title="Subscribe to Posts"><i class="icon-rss"></i> Posts Feed</a></li>
                 </ul>
               </li>
             </ul>
@@ -73,8 +74,9 @@
 
       <footer>
         <p>&copy; {{ site.author.name }} 2013
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>.
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>,
+          <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a> and
+          <a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a>.
         </p>
       </footer>
 
