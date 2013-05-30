@@ -11,7 +11,7 @@ tags: ["Play Framework", "Scala"]
 
 [Play][play] is an open source web framework for Java and Scala heavily inspired by Ruby on Rails and Django. It takes advantage of Scala to provide statically type-checked APIs and web application specific DSLs instead of relying on dynamic features or general purpose technologies like XML. Play applications are stateless, event-based and can easily use non-blocking I/O, which make them good candidates for high-scalability.
 
-[Play for Scala][playforscala], by Peter Hilton and Erik Bakker, is a book about building Scala-based web applications using Play 2 framework. It is currently available through [MEAP][meap] (Manning Early Access Program) and is scheduled for April 2013.
+[Play for Scala][playforscala], by Peter Hilton and Erik Bakker, is a book about building Scala-based web applications using Play 2 framework. It is currently available through [MEAP][meap] (Manning Early Access Program) and is scheduled for July 2013.
 
 The book starts with a short introduction which presents Play framework's key features and overview its usage via a classic "Hello World" example. Then, chapter 2 kicks in with a multilingual "Paper Clips Store" application based on [Twitter Bootstrap][twitterbootstrap] which presents, among other things, the model-view-controller architecture, the form API and how to integrate external libraries; an overall dense, but very captivating introduction to Play framework.
 
