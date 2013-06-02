@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Book Review: Play for Scala"
-description: "Play for Scala is a practical guide to Scala-based web applications development using Play 2 framework."
+description: "Play for Scala is a hands-on guide to Scala-based web applications development using Play 2 framework."
 category: "Reviews"
 tags: ["Play Framework", "Scala"]
 ---
 {% include JB/setup %}
 
-> Play for Scala is a practical guide to Scala-based web applications development using Play 2 framework. It provides detailed and useful explanations about many aspects of the framework and use realistic examples to showcase them while presenting well established paradigms and strategies for web applications development in general.
+> Play for Scala is a hands-on guide to Scala-based web applications development using Play 2 framework. It provides detailed and useful explanations about many aspects of the framework and use realistic examples to showcase them while presenting well established paradigms and strategies for web applications development in general.
 
 [Play][play] is an open source web framework for Java and Scala heavily inspired by Ruby on Rails and Django. It takes advantage of Scala to provide statically type-checked APIs and web application specific DSLs instead of relying on dynamic features or general purpose technologies like XML. Play applications are stateless, event-based and can easily use non-blocking I/O, which make them good candidates for high-scalability.
 
@@ -17,7 +17,7 @@ The book starts with a short introduction which presents Play framework's key fe
 
 The second part of the book digs through every aspect of the framework encountered so far. Chapter 3 overviews Play's architecture and configuration. Chapter 4 focus on HTTP related aspects of the framework like URL routing and static resources serving. Chapter 5 covers data persistence with Anorm and [Squeryl][squeryl]. Chapter 6 deals with views rendering and the template engine. Finally, chapter 7 shows form validation and rendering.
 
-The book ends with a third part that covers most advanced topics and Play's signature features. Chapter 8 starts with a complete single-page application using Ajax and shows many techniques to parse and render JSON documents. Chapter 9 ???. Chapter 10 presents non-blocking I/O ??? Web services, iteratees, WebSocket.
+The book ends with a third part that covers most advanced topics and Play's signature features. Chapter 8 starts with a complete single-page application using Ajax and shows many techniques to parse and render JSON documents. Chapter 9 covers plugins development and application deployement. Chapter 10 presents non-blocking I/O ??? Web services, iteratees, WebSocket.
 
 Play for Scala provides everything a developer should know to build a Scala-based application using Play framework by providing detailed explanations, realistic examples and by covering a wide range of technologies.
 
