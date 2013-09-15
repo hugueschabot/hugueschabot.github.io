@@ -49,7 +49,7 @@
 
   <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -58,28 +58,28 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="{{ HOME_PATH }}"><i class="icon-home"></i> {{ site.title }}</a>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              {% assign pages_list = site.pages %}
-              {% assign group = 'navigation' %}
-              {% include JB/pages_list %}
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> Follow <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  {% if site.author.github %}<li><a href="https://github.com/{{ site.author.github }}" title="Follow me on GitHub"><i class="icon-github-alt"></i> GitHub</a></li>{% endif %}
-                  {% if site.author.twitter %}<li><a href="https://twitter.com/{{ site.author.twitter }}" title="Follow me on Twitter"><i class="icon-twitter"></i> Twitter</a></li>{% endif %}
-                  {% if site.author.linkedin %}<li><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" title="View my profile on LinkedIn"><i class="icon-linkedin"></i> LinkedIn</a></li>{% endif %}
-                  <li><a href="{% if site.author.feedburner %}http://feeds.feedburner.com/{{ site.author.feedburner }}{% else %}{{ BASE_PATH }}atom.xml{% endif %}" title="Subscribe to Posts"><i class="icon-rss"></i> Posts Feed</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="navbar-form navbar-right">
-              <div class="form-group">
-                <input type="text" class="form-control input-sm" placeholder="Search" name="q">
-              </div>
-            </form>
-          </div><!--/.nav-collapse -->
         </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> Follow <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                {% if site.author.github %}<li><a href="https://github.com/{{ site.author.github }}" title="Follow me on GitHub"><i class="icon-github-alt"></i> GitHub</a></li>{% endif %}
+                {% if site.author.twitter %}<li><a href="https://twitter.com/{{ site.author.twitter }}" title="Follow me on Twitter"><i class="icon-twitter"></i> Twitter</a></li>{% endif %}
+                {% if site.author.linkedin %}<li><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" title="View my profile on LinkedIn"><i class="icon-linkedin"></i> LinkedIn</a></li>{% endif %}
+                <li><a href="{% if site.author.feedburner %}http://feeds.feedburner.com/{{ site.author.feedburner }}{% else %}{{ BASE_PATH }}atom.xml{% endif %}" title="Subscribe to Posts"><i class="icon-rss"></i> Posts Feed</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search" name="q">
+            </div>
+          </form>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
 
