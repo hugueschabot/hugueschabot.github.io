@@ -1,9 +1,8 @@
 # https://help.github.com/articles/using-jekyll-with-pages
 
 safe: true
-auto: true
 
-pygments: true
+highlighter: pygments
 permalink: date
 
 exclude: ["README.md", "Rakefile"]
